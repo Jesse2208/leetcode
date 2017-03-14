@@ -1,4 +1,5 @@
 
+
 class ListNode {
     int val;
     ListNode next = null;
@@ -21,12 +22,12 @@ public class DeleteDuplicationofList {
 					pNext=pNext.next;
 					pCurrent.next=pNext;
 				}
-				if(pCurrent==pHead){
-					pHead=pNext;
-					pCurrent=pHead;
-				}
-				else{
-					pPrev.next=pNext;
+				if(pCurrent==pHead){     //当前节点为头结时，由于pPrev为null，
+					pHead=pNext;     //因此需改变pHead,
+					pCurrent=pHead;  //
+				}                        //
+				else{                    //
+					pPrev.next=pNext;//否则直接更改pPrev.next
 					pCurrent=pNext;
 				}
 				if(pNext==null)
