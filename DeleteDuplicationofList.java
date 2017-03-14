@@ -25,7 +25,7 @@ public class DeleteDuplicationofList {
 				if(pCurrent==pHead){     //当前节点为头结时，由于pPrev为null，
 					pHead=pNext;     //因此需改变pHead,
 					pCurrent=pHead;  //
-				}                        //
+				}                        
 				else{                    //
 					pPrev.next=pNext;//否则直接更改pPrev.next
 					pCurrent=pNext;
