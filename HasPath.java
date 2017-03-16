@@ -1,5 +1,5 @@
 import java.util.Arrays;
-
+//回溯法
 public class HasPath {
 	public boolean hasPath(char[] matrix, int rows, int cols, char[] str){
 		int[][]flag=new int[rows][cols];
@@ -16,6 +16,7 @@ public class HasPath {
 		return false;
 			
     }
+	//起点为矩阵中某一个节点，如果和字符串第一个字符相等，则接着判断其相邻四个节点是否和字符串接下来的字符相等	
 	public boolean tell(char[] matrix,int[][]flag,char[] str,int i,int j,int rows, int cols,int index){
 		if(i>=0&&j>=0&&i<rows&&j<cols&&flag[i][j]==0){
 			if(matrix[i*cols+j]==str[index]){
